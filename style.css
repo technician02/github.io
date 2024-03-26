@@ -125,7 +125,7 @@ main p {
 }
 
 /* スマートフォンとタブレット用のスタイル */
-@media (max-width: 768px) {
+@media (max-width: 300px) {
   header {
     flex-direction: column;
   }
