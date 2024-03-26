@@ -1,24 +1,22 @@
-/* レスポンシブな背景画像 */
-body {
-  background-image: url("https://github.com/technician02/github.io/blob/main/IMG_2271.JPG?raw=true");
-  background-size: cover;
-  background-position: center;
-}
-
 /* ナビゲーションメニューの調整 */
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+header nav ul li {
+  flex: 1;
+  text-align: center;
+  margin: 0 5px;
+}
+
 header nav ul li a {
-  text-decoration: none;
-  color: black; /* 通常時のリンクの色 */
-  margin-left: 29px;
-  font-weight: 600;
-  transition: all 0.3s;
+  display: block;
+  padding: 10px 0;
+  border-radius: 5px;
+  color: white;
 }
-
-header nav ul li a:hover {
-  color: #767685;
-}
-
-
 
 /* ボタンエリアの配置 */
 .main .button-area {
