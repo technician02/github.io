@@ -11,6 +11,8 @@ body {
   background-image: url("https://github.com/technician02/github.io/blob/main/IMG\_2271.JPG?raw=true");
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
 }
 
 body::after {
@@ -63,10 +65,11 @@ header nav ul li a:hover {
 }
 
 main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   white-space: nowrap;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -86,6 +89,11 @@ main p {
   margin-top: 40px;
 }
 
+.button-area {
+  display: flex;
+  justify-content: center;
+}
+
 .button-area button {
   padding: 17px 30px;
   background: white;
@@ -96,11 +104,7 @@ main p {
   font-size: 17px;
   cursor: pointer;
   transition: all 0.3s;
-  margin-bottom: 10px;
-}
-
-.button-area .free {
-  margin-right: 30px;
+  margin: 0 10px;
 }
 
 .button-area button:hover {
@@ -129,18 +133,12 @@ main p {
     margin-top: 10px;
   }
 
-  main {
-    top: 30%;
-    transform: translate(-50%, 0);
-  }
-
   .button-area {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .button-area .free {
-    margin-right: 0;
+  .button-area button {
+    margin: 10px 0;
   }
 }
