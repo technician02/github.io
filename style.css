@@ -4,8 +4,28 @@
     box-sizing: border-box;
     font-family: "M PLUS Rounded 1c", sans-serif;
   }
-  
-  body {
+
+  p{
+    background-color: black;
+    color: white;
+}
+@media screen and (max-width: 768px) {
+    p{
+        background-color: black;
+color:green;
+}
+
+} 
+@media screen and (max-width: 480px) {
+    p{
+        background-color: black;
+color:red;
+}
+}
+
+
+
+ body {
     height: 100vh;
     width: 100%;
     background-image: url("https://github.com/technician02/github.io/blob/main/IMG_2271.JPG?raw=true");
