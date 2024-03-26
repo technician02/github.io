@@ -124,26 +124,3 @@ main p {
   transition: 0.15s;
 }
 
-/* スマートフォンとタブレット用のスタイル */
-@media (max-width: 1000px) {
-  header {
-    flex-direction: column;
-  }
-  
-  header nav ul li a {
-    margin: 10px 0;
-  }
-  
-  main h1 {
-    font-size: 40px;
-  }
-  
-  main p {
-    font-size: 20px;
-  }
-  
-  .button-area button {
-    padding: 15px 25px;
-    font-size: 15px;
-  }
-}
