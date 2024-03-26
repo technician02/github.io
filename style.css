@@ -1,59 +1,146 @@
-/* ナビゲーションメニューの調整 */
-header nav ul {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-header nav ul li {
-  flex: 1;
-  text-align: center;
-  margin: 0 5px;
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("https://github.com/technician02/github.io/blob/main/IMG\_2271.JPG?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+header .logo {
+  height: 100px;
+  width: 170px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
 }
 
 header nav ul li a {
-  display: block;
-  padding: 10px 0;
-  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  margin-left: 29px;
+  font-weight: 600;
   color: white;
+  transition: all 0.3s;
 }
 
-/* ボタンエリアの配置 */
+header nav ul li .contact {
+  display: block;
+  background: rgb(72, 149, 142);
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+header nav ul li a:hover {
+  color: #767685;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+main h1 {
+  margin-bottom: 15px;
+  font-size: 65px;
+}
+
+main p {
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .main .button-area {
-  margin-top: 20px;
-}
-
-.button-area {
-  display: flex;
-  justify-content: center;
+  margin-top: 40px;
 }
 
 .button-area button {
-  margin: 0 5px;
+  padding: 17px 30px;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 10px;
 }
 
-/* カーソルスタイルの調整 */
+.button-area .free {
+  margin-right: 30px;
+}
+
+.button-area button:hover {
+  color: #767685;
+}
+
 #cursor {
-  display: none; /* モバイルデバイスでは非表示にする */
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  background: rgba(240, 136, 122, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  top: -16px;
+  left: -16px;
+  transition: 0.15s;
 }
 
-/* モバイルデバイス向けスタイル */
-@media screen and (max-width: 768px) {
-  body {
-    background-image: none; /* 背景画像はモバイルデバイスでは非表示にする */
-    background-color: #f0f0f0; /* 代替の背景色 */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  header {
+  header nav ul {
+    margin-top: 10px;
+  }
+
+  main {
+    top: 30%;
+    transform: translate(-50%, 0);
+  }
+
+  .button-area {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  header .logo {
-    margin-bottom: 10px;
-  }
-
-  main {
-    padding: 0 20px;
+  .button-area .free {
+    margin-right: 0;
   }
 }
