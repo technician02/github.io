@@ -6,11 +6,13 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-image: url("https://github.com/technician02/github.io/blob/main/IMG%5C_2271.JPG?raw=true");
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
 }
 
 body::after {
