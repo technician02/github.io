@@ -8,7 +8,7 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background-image: url("https://github.com/technician02/github.io/blob/main/IMG%5C_2271.JPG?raw=true");
+  background-image: url("https://github.com/technician02/github.io/blob/main/IMG\_2271.JPG?raw=true");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -20,7 +20,7 @@ body::after {
   position: absolute;
   top: 0;
   left: 0;
-  height: 110%;
+  height: 100%;
   width: 100%;
   background: black;
   opacity: 0.5;
@@ -28,10 +28,9 @@ body::after {
 }
 
 header {
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 5px 20px;
 }
 
@@ -42,10 +41,7 @@ header .logo {
 
 header nav ul {
   list-style: none;
-}
-
-header nav ul li {
-  display: inline-block;
+  display: flex;
 }
 
 header nav ul li a {
@@ -69,10 +65,11 @@ header nav ul li a:hover {
 }
 
 main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   white-space: nowrap;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -92,6 +89,11 @@ main p {
   margin-top: 40px;
 }
 
+.button-area {
+  display: flex;
+  justify-content: center;
+}
+
 .button-area button {
   padding: 17px 30px;
   background: white;
@@ -102,17 +104,13 @@ main p {
   font-size: 17px;
   cursor: pointer;
   transition: all 0.3s;
-}
-
-.button-area .free {
-  margin-right: 30px;
+  margin: 0 10px;
 }
 
 .button-area button:hover {
   color: #767685;
 }
 
-/* cursor stalker */
 #cursor {
   pointer-events: none;
   width: 30px;
@@ -125,26 +123,25 @@ main p {
   transition: 0.15s;
 }
 
-/* スマートフォンとタブレット用のスタイル */
 @media (max-width: 768px) {
-  header {
+ header {
     flex-direction: column;
   }
   
   header nav ul li a {
-    margin: 8px 0;
+    margin: 5px 0;
   }
   
   main h1 {
-    font-size: 20px;
+    font-size: 35px;
   }
   
   main p {
-    font-size: 10px;
+    font-size: 25px;
   }
   
   .button-area button {
     padding: 15px 25px;
-    font-size: 15px;
+    font-size: 10px;
   }
 }
